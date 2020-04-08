@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robo Genix</title>
+    <link rel="stylesheet" href="./style.css"></link>
+</head>
+<body>
+    <div class="banner">
+        <div class="left-box">
+            <div class="wrapper">
+                <img src="./images/icon.png" class="icon"/>
+                <div class="search-box">
+                    <img src="./images/search.png" alt="" />
+                    <input type="text" placeholder="search" />
+                </div>
+                <div class="vertical-line">                    
+                </div>
+                <ul>
+                    <li><a href="#">PRODUCTION</a></li>
+                    <li><a href="#">DEVELOP</a></li>
+                    <li><a href="#">UAT</a></li>
+                    <li><a href="#">RELEASE</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-box">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Products</a></li>
+                </ul>
+            </nav>
+            <h2>THE NEXT <br>GENERATION</h2>
+            <div class="robot">
+                <img src="./images/robo.png" alt="" />
+                <h1>ROBOTICS</h1>
+                <div class="features">
+                    <div>
+                        <small>WATCH PREVIEW</small>
+                        <img src="./images/play.png" alt="" />
+                    </div>
+                    <div>
+                        <small>THE MAKING</small>
+                        <img src="./images/settings.png" alt="" />
+                    </div>
+                    <div>
+                        <small>DOWNLOAD PDF</small>
+                        <img src="./images/download.png" alt="" />
+                    </div>
+                </div>
+            </div>
+            <div class="circle">
+
+            </div>
+            <div class="pagination">
+                <ul>
+                    <li class="active"><a href="#">01</a></li>
+                    <li><a href="#">02</a></li>
+                    <li><a href="#">03</a></li>
+                    <li><a href="#">04</a></li>
+                    <li><a href="#">05</a></li>
+                </ul>
+            </div>
+            <img src="./images/volume.png" alt="" class="volume">
+        </div>
+    </div>
+    <div class="smallCursor">
+
+    </div>
+    <div class="largeCursor">
+
+    </div>
+    <script>
+        var smallCursor = document.querySelector(".smallCursor");
+        var largeCursor = document.querySelector(".largeCursor");
+        document.onmousemove = function(e) {
+            smallCursor.style.left = (e.pageX - 5) + "px";
+            smallCursor.style.top = (e.pageY - 5) + "px";
+            largeCursor.style.left = (e.pageX - 22) + "px";
+            largeCursor.style.top = (e.pageY - 22) + "px";
+            largeCursor.style.display = "block";
+            smallCursor.style.display = "block";
+        }
+    </script>
+</body>
+</html>

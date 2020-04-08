@@ -1,0 +1,230 @@
+/* This is a common technique called a CSS reset. Different browsers use
+ different default margins, causing sites to look different by margins. 
+ The * means "all elements" (a universal selector), 
+ so we are setting all elements to have zero margins
+, and zero padding, thus making them look the same in all browsers. */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #000;
+    color: #fff;
+    font-family: sans-serif;
+    overflow: hidden;
+    /* hide default cursor */
+    cursor: none; 
+}
+
+/* provides height of the viewport */
+.banner {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+/* here one box will take 20% of width and the other will take all remaining */
+.left-box {
+    flex-basis: 20%;
+    background: #002e52;
+}
+.right-box {
+    flex-basis: 80%;
+    position: relative;
+}
+
+.icon {
+    width: 100px;
+}
+
+/* remaining 20% of space will be spread out as margin on 10% on left side nad 10% on right side */
+.wrapper {
+    width: 80%;
+    margin: auto;
+}
+
+.search-box {
+    display: flex;
+    border-radius: 20px;
+    background: #fff;
+    padding: 10px 7px;
+}
+
+.search-box img {
+    width: 18px;
+    margin: auto 5px;
+}
+
+.search-box input {
+    border: 0;
+    background: transparent;
+    outline: none;
+    width: 80%;
+    z-index: 2;
+}
+
+.vertical-line {
+    width: 1px;
+    height: 40vh;
+    background: #797979;
+    margin: 30px 0 10px;
+}
+
+.wrapper ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.wrapper ul li a {
+    color: #797979;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+nav {
+    margin-top: 60px;
+    margin-left: 60px;
+}
+
+nav ul {
+    display: flex;
+}
+nav ul li {
+    list-style: none;
+    margin-right: 70px;
+}
+
+nav ul li a {
+    font-size: 13px;
+    text-decoration: none;
+    color: #fff;
+}
+
+/* % in margin-left or right is the % of width */
+.right-box h2 {
+    margin-top: 5%;
+    margin-left: 60px;
+    font-size: 60px;
+    letter-spacing: 3px;
+}
+
+.robot {
+    position: absolute;
+    bottom: 0;
+    right: 6%;
+    height: 93%;
+}
+
+.robot img {
+    height: 100%;
+}
+.robot h1 {
+    font-size: 130px;
+    position: absolute;
+    top: 100px;
+    right: -30px;
+    color: #e2e2e2;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.features {
+    position: absolute;
+    bottom: 17%;
+    left: -220px;
+}
+
+.features img {
+    width: 50px;
+    margin-left: 40px;
+}
+
+.features div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.features div:nth-child(2) {
+    margin-left: 35px;
+}
+
+.features div:nth-child(3) {
+    margin-left: 38px;
+}
+
+.circle {
+    width: 180px;
+    height: 180px;
+    border: 40px solid rgba(255,255,255, 0.1);
+    border-radius: 50%;
+    position: absolute;
+    top: 38%;
+    left: -130px;
+}
+
+.pagination {
+    position: absolute;
+    left: 60px;
+    bottom: 5%;
+}
+
+.pagination ul {
+    display: flex;
+    align-items: flex-end;
+}
+
+.pagination ul li {
+    list-style: none;
+    margin-right: 20px;
+}
+
+.pagination ul li a{
+    text-decoration: none;
+    padding: 10px;
+    color: #fff;
+    font-size: 12px;
+    border-bottom: 2px solid #fff;
+}
+
+.pagination ul li.active a{
+    font-size: 22px;
+    border-bottom: 5px solid #fff;
+}
+
+.volume {
+    width: 25px;
+    position: absolute;
+    right: 4%;
+    bottom: 4%;
+}
+
+.smallCursor {
+    width: 10px;
+    height: 10px;
+    background: #3fc9f5;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    display: none;
+}
+
+.largeCursor {
+    width: 40px;
+    height: 40px;
+    border:4px solid  #3fc9f5;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    display: none;
+    transition-duration: 500ms;
+    transition-timing-function: ease-out;
+}
+
+/* To make things clickable */
+
+a {
+    position: relative;
+    z-index: 2;
+}
